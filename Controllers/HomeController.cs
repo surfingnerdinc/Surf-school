@@ -23,7 +23,17 @@ namespace surfschool.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Signin()
+        {
+            return View();
+        }
+
+        public IActionResult Signup()
+        {
+            return View();
+        }
+
+        public IActionResult About()
         {
             return View();
         }

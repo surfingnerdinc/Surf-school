@@ -5,30 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - surfschool</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/About.css" />
+    <link rel="stylesheet" href="~/css/Createacc.css" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">surfschool</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+<body class="hero-img">
+    <section>
+        <nav id="overlay">
+            <img src="~/css/exit.svg" class="close-btn" id="close-menu">
+            <ul>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Home</a><span>Just log in and enjoy!</span></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Signin">Sign in</a><span>Just log in and enjoy!</</span></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Signup">Sign up</a><span>Create account in our app!</span></li>
+                <li><a asp-area="" asp-controller="Home" asp-action="About">About App</a><span>Read about app!</span></li>
+            </ul>
+            <div class="bottom-menu">
+                <h5>Get in touch</h5>
+                <div class="social-media">
+                    <a href="https://facebook.com"><i class="fa fa-facebook"></i></a>
+                    <a href="https://youtube.com"><i class="fa fa-youtube"></i></a>
+                    <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+                    <a href="https://linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                 </div>
             </div>
         </nav>
+    </section>
+    <header>
+        <a href="#"><img src="~/css/own-logo.svg" alt="surfing nerd inc" class="logo"></a>
+        <img src="~/css/menu.svg" class="menu-btn" id="open-menu">
     </header>
+    <script type="text/javascript" src="main/scripts/main.js"></script>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
